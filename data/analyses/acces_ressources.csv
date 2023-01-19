@@ -1,690 +1,320 @@
 Code_UAI;acces_ressources
 0810016C;Bien
 0810026N;Bien
-0810041E;Très bien
+0810041E;Mauvais
 0810124V;Bien
-0810125W;Mauvais
-0811144D;Très bien
-0820883P;Mauvais
-0090001C;Bien
-0090007J;Assez bien
-0090009L;Bien
-0090013R;Très bien
-0090015T;Assez bien
-0090024C;Assez bien
-0110067N;Bien
-0110665N;Très bien
-0110666P;Très bien
-0111015U;Assez bien
-0120004P;Très bien
-0120021H;Très bien
-0120037A;Bien
-0120096P;Bien
-0120101V;Très bien
-0121295T;Très bien
-0300006U;Mauvais
-0300027S;Assez bien
-0300039E;Mauvais
-0300042H;Mauvais
-0300046M;Bien
-0300059B;Mauvais
-0300062E;Mauvais
-0301327E;Mauvais
-0301656M;Très bien
-0301671D;Mauvais
-0301778V;Bien
-0310001H;Assez bien
-0310003K;Assez bien
-0310008R;Bien
-0310012V;Bien
-0310015Y;Très bien
-0310021E;Bien
-0310022F;Bien
-0310052N;Bien
-0310083X;Assez bien
-0310088C;Très bien
-0311093V;Assez bien
-0311094W;Très bien
-0311266H;Bien
-0311334G;Bien
-0311335H;Bien
-0311584D;Très bien
-0311586F;Bien
-0311689T;Très bien
-0311720B;Mauvais
-0311721C;Très bien
-0311772H;Bien
-0312071H;Assez bien
-0312307P;Assez bien
-0312423R;Bien
-0312612W;Très bien
-0312700S;Mauvais
-0312729Y;Bien
-0312754A;Bien
-0312759F;Bien
-0312822Z;Très bien
-0312843X;Très bien
-0320029H;Très bien
-0320067Z;Assez bien
-0320074G;Assez bien
-0320608M;Mauvais
-0340011C;Mauvais
-0340021N;Assez bien
-0340042L;Très bien
-0341277D;Bien
-0341592W;Mauvais
-0341893Y;Mauvais
-0342052W;Mauvais
-0342225J;Assez bien
-0460007H;Bien
-0460051F;Bien
-0460493L;Bien
-0460528Z;Très bien
-0460592U;Assez bien
-0480007X;Très bien
-0480015F;Bien
-0650015N;Assez bien
-0650018S;Très bien
-0650029D;Très bien
-0650031F;Très bien
-0650050B;Très bien
-0660004W;Bien
-0660029Y;Mauvais
-0660051X;Mauvais
-0660809W;Très bien
-0660848N;Bien
-0660925X;Très bien
-0810012Y;Très bien
-0810019F;Très bien
-0810027P;Très bien
-0810043G;Bien
-0810127Y;Bien
-0810995S;Très bien
-0811032G;Bien
-0811340S;Bien
-0820014V;Très bien
-0820016X;Bien
-0820017Y;Bien
-0820029L;Mauvais
-0090003E;Très bien
-0090006H;Mauvais
+0810125W;Assez bien
+0811144D;Mauvais
+0820883P;Assez bien
+0090003E;Mauvais
+0090006H;Assez bien
 0090019X;Bien
 0090025D;Assez bien
 0090055L;Très bien
 0110003U;Bien
-0110010B;Mauvais
+0110010B;Assez bien
 0110067N;Bien
-0110665N;Très bien
+0110665N;Mauvais
 0110675Z;Très bien
-0110870L;Très bien
+0110870L;Mauvais
 0120002M;Très bien
-0120031U;Très bien
-0121176N;Assez bien
-0300023M;Très bien
-0300036B;Assez bien
-0300946R;Mauvais
-0301010K;Très bien
+0120031U;Mauvais
+0121176N;Très bien
+0300023M;Mauvais
+0300036B;Très bien
+0300946R;Assez bien
+0301010K;Mauvais
 0301214G;Bien
-0301232B;Très bien
-0310015Y;Très bien
+0301232B;Mauvais
+0310015Y;Assez bien
 0310022F;Bien
 0310024H;Très bien
 0310039Z;Bien
-0310046G;Très bien
+0310046G;Mauvais
 0310052N;Bien
-0310084Y;Mauvais
-0311235Z;Mauvais
-0311265G;Assez bien
+0310084Y;Assez bien
+0311235Z;Très bien
+0311265G;Très bien
 0311266H;Bien
 0311327Z;Assez bien
 0311333F;Bien
 0311335H;Bien
-0311584D;Très bien
+0311584D;Mauvais
 0311586F;Bien
-0311631E;Assez bien
+0311631E;Très bien
 0311686P;Bien
-0311687R;Très bien
-0311689T;Très bien
-0311851U;Très bien
+0311687R;Mauvais
+0311689T;Mauvais
+0311851U;Mauvais
 0312140H;Très bien
 0312478A;Bien
-0312610U;Assez bien
+0312610U;Très bien
 0312729Y;Bien
 0312759F;Bien
-0312915A;Assez bien
-0320015T;Très bien
-0320019X;Très bien
+0312915A;Très bien
+0320015T;Mauvais
+0320019X;Mauvais
 0320021Z;Très bien
-0320023B;Mauvais
-0320028G;Très bien
-0320035P;Assez bien
-0320036R;Mauvais
-0320074G;Assez bien
+0320023B;Assez bien
+0320028G;Mauvais
+0320035P;Très bien
+0320036R;Assez bien
+0320074G;Très bien
 0320562M;Très bien
 0320608M;Mauvais
 0340008Z;Bien
-0340009A;Mauvais
-0340011C;Mauvais
+0340009A;Assez bien
+0340011C;Assez bien
 0340053Y;Très bien
-0340837A;Mauvais
+0340837A;Assez bien
 0340973Y;Assez bien
-0340998A;Très bien
+0340998A;Mauvais
 0341030K;Bien
 0341276C;Très bien
-0341364Y;Assez bien
+0341364Y;Très bien
 0341388Z;Très bien
-0341764H;Très bien
+0341764H;Mauvais
 0341794R;Très bien
-0341870Y;Très bien
+0341870Y;Mauvais
 0341921D;Bien
-0342036D;Très bien
-0342050U;Mauvais
-0342225J;Assez bien
+0342036D;Mauvais
+0342050U;Assez bien
+0342225J;Très bien
 0460013P;Bien
 0460027E;Bien
-0460030H;Mauvais
-0460565P;Mauvais
+0460030H;Assez bien
+0460565P;Assez bien
 0460573Y;Assez bien
-0480004U;Assez bien
-0480005V;Assez bien
-0650025Z;Assez bien
+0480004U;Très bien
+0480005V;Très bien
+0650025Z;Très bien
 0650031F;Très bien
-0650034J;Très bien
+0650034J;Mauvais
 0650050B;Très bien
-0650089U;Assez bien
-0660001T;Très bien
-0660019M;Mauvais
-0660038H;Mauvais
-0090010M;Mauvais
-0090481Z;Assez bien
-0110027V;Mauvais
-0110672W;Bien
-0110686L;Mauvais
-0110721Z;Mauvais
-0111048E;Mauvais
-0111051H;Très bien
-0120012Y;Mauvais
-0120024L;Bien
-0120878P;Très bien
-0121273U;Bien
-0300031W;Très bien
-0300036B;Assez bien
-0300041G;Mauvais
-0300055X;Mauvais
-0300141R;Bien
-0301010K;Très bien
-0301014P;Mauvais
-0301210C;Mauvais
-0301232B;Très bien
-0301552Z;Bien
-0301721H;Très bien
-0310024H;Assez bien
-0310032S;Bien
-0310035V;Mauvais
-0310038Y;Bien
-0310056T;Assez bien
-0310091F;Très bien
-0311237B;Assez bien
-0311238C;Très bien
-0311264F;Mauvais
-0311325X;Très bien
-0311328A;Assez bien
-0311338L;Très bien
-0311581A;Bien
-0311582B;Bien
-0311688S;Bien
-0311718Z;Bien
-0311769E;Assez bien
-0312092F;Assez bien
-0312093G;Assez bien
-0312220V;Bien
-0312290W;Assez bien
-0312610U;Assez bien
-0312698P;Assez bien
-0312743N;Très bien
-0312744P;Assez bien
-0312915A;Assez bien
-0312938A;Mauvais
-0320009L;Bien
-0320019X;Très bien
-0320025D;Bien
-0320027F;Bien
-0320031K;Assez bien
-0320035P;Assez bien
-0340009A;Mauvais
-0340037F;Très bien
-0340039H;Très bien
-0340048T;Mauvais
-0340053Y;Très bien
-0340059E;Très bien
-0340076Y;Très bien
-0340088L;Très bien
-0340998A;Très bien
-0341028H;Très bien
-0341278E;Mauvais
-0341388Z;Très bien
-0341656R;Mauvais
-0341705U;Très bien
-0342326U;Très bien
-0460001B;Bien
-0460015S;Assez bien
-0460018V;Assez bien
-0460022Z;Assez bien
-0460026D;Bien
-0460530B;Bien
-0460573Y;Assez bien
-0480013D;Bien
-0480016G;Mauvais
-0650027B;Mauvais
-0660001T;Très bien
-0660012E;Bien
-0660018L;Assez bien
-0660021P;Très bien
-0660856X;Assez bien
-0660864F;Très bien
-0810002M;Assez bien
-0810003N;Très bien
-0810006S;Très bien
-0810030T;Très bien
-0810033W;Bien
-0810036Z;Très bien
-0810788S;Mauvais
-0820588U;Très bien
-0820704V;Très bien
-0820713E;Très bien
-0090007J;Assez bien
-0090481Z;Assez bien
+0650089U;Très bien
+0660001T;Mauvais
+0660019M;Assez bien
+0660038H;Assez bien
+0090007J;Très bien
+0090481Z;Très bien
 0090546V;Très bien
 0110037F;Bien
 0110672W;Bien
-0110721Z;Mauvais
-0111048E;Mauvais
-0120020G;Mauvais
+0110721Z;Bien
+0111048E;Assez bien
+0120020G;Assez bien
 0120024L;Bien
 0120037A;Bien
-0120878P;Très bien
-0121295T;Très bien
-0300037C;Très bien
-0300039E;Mauvais
-0301210C;Mauvais
+0120878P;Mauvais
+0121295T;Mauvais
+0300037C;Mauvais
+0300039E;Assez bien
+0301210C;Assez bien
 0301721H;Très bien
-0310007P;Mauvais
+0310007P;Assez bien
 0310012V;Bien
 0310037X;Bien
-0310041B;Très bien
-0310053P;Très bien
-0311094W;Très bien
-0311111P;Assez bien
-0311232W;Très bien
+0310041B;Mauvais
+0310053P;Mauvais
+0311094W;Mauvais
+0311111P;Très bien
+0311232W;Mauvais
 0311338L;Très bien
 0311582B;Bien
-0311690U;Très bien
-0312307P;Assez bien
+0311690U;Mauvais
+0312307P;Très bien
 0312696M;Bien
-0312822Z;Très bien
+0312822Z;Mauvais
 0320008K;Bien
 0320009L;Bien
 0320014S;Assez bien
 0320033M;Bien
 0340039H;Très bien
 0340996Y;Très bien
-0341363X;Mauvais
+0341363X;Assez bien
 0341367B;Bien
-0460026D;Très bien
-0460028F;Très bien
-0460592U;Assez bien
-0480003T;Assez bien
-0480016G;Mauvais
+0460026D;Mauvais
+0460028F;Mauvais
+0460592U;Très bien
+0480003T;Très bien
+0480016G;Assez bien
 0480688M;Bien
 0650003A;Très bien
-0650014M;Très bien
-0650026A;Assez bien
-0650029D;Très bien
-0650038N;Mauvais
-0660011D;Très bien
+0650014M;Mauvais
+0650026A;Très bien
+0650029D;Mauvais
+0650038N;Assez bien
+0660011D;Mauvais
 0660037G;Très bien
 0660648W;Bien
-0660866H;Assez bien
+0660866H;Très bien
 0810030T;Très bien
-0810993P;Assez bien
+0810993P;Très bien
 0811197L;Bien
 0811340S;Bien
-0820007M;Très bien
+0820007M;Mauvais
 0820021C;Très bien
-0820032P;Très bien
-0820704V;Très bien
-0090056M;Mauvais
-0090573Z;Assez bien
-0110003U;Bien
-0110012D;Très bien
-0110022P;Très bien
-0110068P;Mauvais
-0120022J;Bien
-0120029S;Très bien
-0120032V;Mauvais
-0300023M;Très bien
-0300052U;Assez bien
-0300946R;Mauvais
-0300947S;Mauvais
-0301012M;Bien
-0301096D;Très bien
-0310005M;Bien
-0310007P;Mauvais
-0310017A;Assez bien
-0310019C;Bien
-0310029N;Bien
-0310053P;Bien
-0310054R;Assez bien
-0311330C;Très bien
-0311573S;Mauvais
-0311580Z;Assez bien
-0311630D;Bien
-0311632F;Assez bien
-0311902Z;Bien
-0312140H;Très bien
-0312289V;Assez bien
-0312337X;Très bien
-0312609T;Très bien
-0312686B;Assez bien
-0312696M;Bien
-0312699R;Assez bien
-0312746S;Bien
-0312762J;Assez bien
-0312799Z;Très bien
-0312842W;Bien
-0320015T;Très bien
-0320023B;Mauvais
-0320040V;Mauvais
-0320562M;Très bien
-0340006X;Mauvais
-0340031Z;Très bien
-0340063J;Mauvais
-0340065L;Mauvais
-0340070S;Très bien
-0340996Y;Très bien
-0341032M;Mauvais
-0341363X;Mauvais
-0341364Y;Assez bien
-0341366A;Mauvais
-0341367B;Bien
-0341870Y;Très bien
-0341921D;Bien
-0342036D;Très bien
-0342051V;Très bien
-0342266D;Très bien
-0460020X;Bien
-0460529A;Assez bien
-0460594W;Bien
-0650003A;Mauvais
-0650012K;Très bien
-0650014M;Assez bien
-0650020U;Bien
-0650022W;Mauvais
-0650034J;Très bien
-0650036L;Bien
-0660028X;Très bien
-0660037G;Très bien
-0660038H;Mauvais
-0660078B;Mauvais
-0660522J;Assez bien
-0660924W;Mauvais
-0810016C;Bien
-0810025M;Bien
-0810041E;Très bien
-0810126X;Assez bien
-0810961E;Assez bien
-0820007M;Très bien
-0820020B;Très bien
-0820021C;Très bien
-0090010M;Mauvais
-0090012P;Mauvais
-0090015T;Assez bien
-0090573Z;Assez bien
-0110027V;Mauvais
-0111051H;Très bien
+0820032P;Mauvais
+0820704V;Mauvais
+0090010M;Assez bien
+0090012P;Assez bien
+0090015T;Très bien
+0090573Z;Très bien
+0110027V;Assez bien
+0111051H;Mauvais
 0120006S;Bien
-0120019F;Très bien
-0120021H;Très bien
-0120025M;Très bien
-0120028R;Assez bien
-0120029S;Très bien
+0120019F;Mauvais
+0120021H;Mauvais
+0120025M;Mauvais
+0120028R;Très bien
+0120029S;Mauvais
 0120101V;Très bien
-0121178R;Très bien
-0300021K;Mauvais
-0300042H;Mauvais
+0121178R;Assez bien
+0300021K;Assez bien
+0300042H;Assez bien
 0300046M;Bien
-0301013N;Mauvais
+0301013N;Assez bien
 0301096D;Très bien
 0301552Z;Bien
 0301778V;Bien
-0310001H;Assez bien
+0310001H;Très bien
 0310008R;Bien
-0310017A;Assez bien
+0310017A;Très bien
 0310019C;Bien
-0310025J;Assez bien
+0310025J;Très bien
 0310029N;Bien
 0310038Y;Bien
 0310040A;Bien
-0310047H;Très bien
-0310051M;Très bien
-0310054R;Assez bien
+0310047H;Mauvais
+0310051M;Mauvais
+0310054R;Très bien
 0310083X;Très bien
-0310085Z;Assez bien
-0310088C;Très bien
-0311231V;Mauvais
+0310085Z;Très bien
+0310088C;Mauvais
+0311231V;Assez bien
 0311238C;Très bien
-0311330C;Très bien
-0311630D;Très bien
-0311632F;Assez bien
-0311633G;Assez bien
+0311330C;Mauvais
+0311630D;Mauvais
+0311632F;Très bien
+0311633G;Très bien
 0311688S;Bien
-0311769E;Assez bien
+0311769E;Très bien
 0312071H;Assez bien
 0312092F;Bien
 0312611V;Bien
-0312699R;Assez bien
+0312699R;Très bien
 0312754A;Bien
-0320002D;Très bien
+0320002D;Mauvais
 0320006H;Bien
-0320011N;Assez bien
-0340040J;Mauvais
+0320011N;Très bien
+0340040J;Assez bien
 0340111L;Très bien
 0341321B;Bien
-0341366A;Mauvais
-0341893Y;Mauvais
-0342326U;Très bien
-0460008J;Mauvais
-0460022Z;Assez bien
+0341366A;Assez bien
+0341893Y;Assez bien
+0342326U;Mauvais
+0460008J;Assez bien
+0460022Z;Très bien
 0460528Z;Très bien
-0460529A;Assez bien
+0460529A;Très bien
 0460530B;Bien
 0480015F;Bien
 0480607Z;Assez bien
 0650018S;Très bien
 0650033H;Très bien
 0660051X;Mauvais
-0660480N;Très bien
-0660522J;Assez bien
-0810004P;Très bien
-0810005R;Assez bien
+0660480N;Mauvais
+0660522J;Très bien
+0810004P;Mauvais
+0810005R;Très bien
 0810006S;Très bien
-0810019F;Très bien
+0810019F;Mauvais
 0810025M;Bien
-0810037A;Assez bien
-0810038B;Assez bien
+0810037A;Très bien
+0810038B;Très bien
 0810051R;Bien
 0810127Y;Bien
 0811030E;Bien
 0811331G;Bien
 0820001F;Assez bien
 0820066B;Bien
-0820683X;Assez bien
+0820683X;Très bien
 0820896D;Très bien
-0810003N;Très bien
-0810023K;Très bien
-0810044H;Très bien
-0810061B;Assez bien
+0810003N;Mauvais
+0810023K;Mauvais
+0810044H;Mauvais
+0810061B;Très bien
 0810787R;Très bien
-0810961E;Assez bien
-0810995S;Très bien
-0820014V;Très bien
+0810961E;Très bien
+0810995S;Mauvais
+0820014V;Mauvais
 0820016X;Bien
 0820017Y;Bien
-0820020B;Très bien
-0820029L;Mauvais
-0820588U;Très bien
-0820823Z;Mauvais
-0820891Y;Assez bien
-0090012P;Mauvais
-0090019X;Bien
-0090020Y;Très bien
-0090025D;Assez bien
-0090478W;Bien
-0110025T;Très bien
-0110667R;Très bien
-0110675Z;Très bien
-0120006S;Bien
-0120016C;Assez bien
-0121297V;Très bien
-0300016E;Mauvais
-0300020J;Bien
-0300021K;Mauvais
-0300026R;Très bien
-0300032X;Bien
-0300037C;Très bien
-0300043J;Bien
-0300950V;Très bien
-0301013N;Mauvais
-0301094B;Assez bien
-0301214G;Bien
-0301325C;Bien
-0310023G;Assez bien
-0310025J;Assez bien
-0310028M;Mauvais
-0310031R;Bien
-0310037X;Bien
-0310039Z;Bien
-0310085Z;Assez bien
-0310092G;Très bien
-0311092U;Mauvais
-0311111P;Assez bien
-0311232W;Très bien
-0311235Z;Assez bien
-0311265G;Assez bien
-0311321T;Bien
-0311327Z;Assez bien
-0311333F;Bien
-0311631E;Assez bien
-0311633G;Assez bien
-0311634H;Bien
-0311686P;Bien
-0311690U;Très bien
-0311851U;Très bien
-0312267W;Bien
-0312338Y;Bien
-0320002D;Très bien
-0320006H;Bien
-0320010M;Assez bien
-0320012P;Mauvais
-0320563N;Assez bien
-0340032A;Assez bien
-0340075X;Assez bien
-0340110K;Bien
-0341368C;Très bien
-0341764H;Très bien
-0342077Y;Mauvais
-0342090M;Bien
-0460008J;Mauvais
-0460028F;Bien
-0480004U;Assez bien
-0480006W;Assez bien
-0480017H;Mauvais
-0480607Z;Assez bien
-0650005C;Mauvais
-0650026A;Assez bien
-0650033H;Assez bien
-0650037M;Très bien
-0650040R;Bien
-0650088T;Très bien
-0660431K;Très bien
-0660600U;Très bien
-0660648W;Bien
-0810004P;Très bien
-0810005R;Assez bien
-0810028R;Bien
-0810038B;Assez bien
-0810052S;Bien
-0810959C;Assez bien
-0810960D;Assez bien
-0810993P;Assez bien
-0811030E;Bien
-0811331G;Bien
-0820001F;Assez bien
-0820004J;Très bien
-0820032P;Très bien
-0820684Y;Assez bien
-0820891Y;Assez bien
-0820896D;Très bien
-0090018W;Très bien
-0090024C;Assez bien
-0090056M;Mauvais
-0110019L;Très bien
+0820020B;Mauvais
+0820029L;Assez bien
+0820588U;Mauvais
+0820823Z;Assez bien
+0820891Y;Très bien
+0090018W;Mauvais
+0090024C;Très bien
+0090056M;Assez bien
+0110019L;Mauvais
 0110023R;Bien
-0110068P;Mauvais
-0120016C;Mauvais
+0110068P;Assez bien
+0120016C;Assez bien
 0120032V;Mauvais
-0120038B;Assez bien
+0120038B;Très bien
 0120096P;Bien
-0120622L;Assez bien
-0121133S;Mauvais
+0120622L;Très bien
+0121133S;Assez bien
 0121273U;Bien
-0121297V;Très bien
-0300002P;Très bien
+0121297V;Mauvais
+0300002P;Mauvais
 0300031W;Très bien
 0300032X;Bien
 0300043J;Bien
-0300062E;Mauvais
+0300062E;Assez bien
 0300949U;Bien
 0300950V;Très bien
 0301012M;Bien
 0301325C;Bien
-0301671D;Mauvais
-0310003K;Assez bien
+0301671D;Assez bien
+0310003K;Très bien
 0310005M;Bien
 0310021E;Bien
-0310028M;Mauvais
-0310056T;Assez bien
-0310057U;Assez bien
+0310028M;Assez bien
+0310056T;Très bien
+0310057U;Très bien
 0310091F;Très bien
-0311092U;Mauvais
-0311240E;Très bien
+0311092U;Assez bien
+0311240E;Mauvais
 0311321T;Bien
-0311580Z;Assez bien
+0311580Z;Très bien
 0311634H;Bien
 0311718Z;Bien
 0311772H;Bien
-0312093G;Assez bien
+0312093G;Très bien
 0312609T;Très bien
-0312697N;Très bien
+0312697N;Mauvais
 0312743N;Très bien
 0312744P;Assez bien
 0312746S;Bien
-0312868Z;Assez bien
+0312868Z;Très bien
 0320001C;Mauvais
 0320010M;Très bien
 0320029H;Très bien
-0320031K;Assez bien
-0320040V;Mauvais
-0320740F;Mauvais
-0340006X;Mauvais
-0340021N;Assez bien
-0340032A;Assez bien
+0320031K;Très bien
+0320040V;Assez bien
+0320740F;Assez bien
+0340006X;Assez bien
+0340021N;Très bien
+0340032A;Très bien
 0340059E;Très bien
-0340063J;Mauvais
-0340075X;Assez bien
+0340063J;Assez bien
+0340075X;Très bien
 0340088L;Très bien
 0341028H;Très bien
-0341656R;Mauvais
+0341656R;Assez bien
 0342066L;Bien
 0342090M;Bien
 0460001B;Bien
@@ -692,216 +322,117 @@ Code_UAI;acces_ressources
 0460010L;Très bien
 0460015S;Assez bien
 0460493L;Bien
-0460593V;Très bien
+0460593V;Mauvais
 0460594W;Bien
-0480006W;Assez bien
+0480006W;Très bien
 0480013D;Bien
-0480017H;Mauvais
-0650005C;Mauvais
+0480017H;Assez bien
+0650005C;Assez bien
 0650012K;Très bien
-0650019T;Très bien
+0650019T;Mauvais
 0650037M;Très bien
-0650088T;Très bien
-0650740B;Mauvais
-0660018L;Assez bien
-0660021P;Très bien
-0660029Y;Mauvais
+0650088T;Mauvais
+0650740B;Assez bien
+0660018L;Très bien
+0660021P;Mauvais
+0660029Y;Assez bien
 0660601V;Bien
-0090002D;Assez bien
-0090003E;Très bien
-0090006H;Mauvais
-0090018W;Bien
-0090055L;Très bien
-0110010B;Mauvais
-0110019L;Très bien
-0110023R;Bien
-0110037F;Bien
-0110676A;Très bien
-0110724C;Très bien
-0110870L;Très bien
-0120002M;Très bien
-0120014A;Mauvais
-0120025M;Très bien
-0120028R;Assez bien
-0120031U;Très bien
-0121176N;Assez bien
-0300002P;Très bien
-0301654K;Très bien
-0301722J;Très bien
-0301723K;Mauvais
-0310006N;Assez bien
-0310040A;Bien
-0310041B;Très bien
-0310046G;Très bien
-0310047H;Très bien
-0310051M;Très bien
-0310084Y;Mauvais
-0311231V;Mauvais
-0311240E;Très bien
-0311263E;Très bien
-0311687R;Très bien
-0311850T;Mauvais
-0312139G;Très bien
-0312611V;Bien
-0312697N;Très bien
-0312868Z;Assez bien
-0320001C;Mauvais
-0320011N;Assez bien
-0320013R;Très bien
-0320014S;Assez bien
-0320028G;Très bien
-0320030J;Assez bien
-0320033M;Bien
-0320036R;Mauvais
-0340008Z;Bien
-0340040J;Mauvais
-0340111L;Très bien
-0340972X;Mauvais
-0340973Y;Assez bien
-0340974Z;Très bien
-0341030K;Bien
-0341321B;Bien
-0341736C;Très bien
-0341794R;Très bien
-0341825Z;Très bien
-0341826A;Mauvais
-0342050U;Mauvais
-0342066L;Bien
-0342132H;Mauvais
-0460006G;Assez bien
-0460010L;Très bien
-0460013P;Bien
-0460027E;Bien
-0460030H;Mauvais
-0460593V;Très bien
-0480688M;Bien
-0650017R;Mauvais
-0650019T;Très bien
-0650025Z;Assez bien
-0650038N;Mauvais
-0650041S;Mauvais
-0650089U;Assez bien
-0650740B;Mauvais
-0660008A;Très bien
-0660010C;Très bien
-0660011D;Très bien
-0660019M;Mauvais
-0660030Z;Très bien
-0660480N;Très bien
-0660601V;Bien
-0660866H;Assez bien
-0810008U;Très bien
-0810020G;Très bien
-0810023K;Très bien
-0810037A;Assez bien
-0810044H;Très bien
-0810051R;Bien
-0810124V;Bien
-0810125W;Mauvais
-0810787R;Très bien
-0811144D;Très bien
-0811197L;Bien
-0820011S;Très bien
-0820022D;Très bien
-0820066B;Bien
-0820067C;Bien
-0820683X;Assez bien
-0090001C;Très bien
-0090002D;Assez bien
+0090001C;Mauvais
+0090002D;Très bien
 0090009L;Bien
-0090013R;Très bien
-0090020Y;Très bien
+0090013R;Mauvais
+0090020Y;Mauvais
 0090478W;Bien
-0110012D;Très bien
+0110012D;Mauvais
 0110022P;Très bien
-0110025T;Très bien
-0110666P;Très bien
+0110025T;Mauvais
+0110666P;Mauvais
 0110676A;Très bien
 0120004P;Très bien
 0120022J;Bien
 0300020J;Bien
-0300026R;Très bien
-0300027S;Assez bien
+0300026R;Mauvais
+0300027S;Très bien
 0300141R;Bien
-0301014P;Mauvais
+0301014P;Assez bien
 0301656M;Très bien
 0301723K;Mauvais
-0310023G;Assez bien
+0310023G;Très bien
 0310032S;Bien
-0310035V;Mauvais
+0310035V;Assez bien
 0310092G;Très bien
-0311093V;Assez bien
+0311093V;Très bien
 0311112R;Très bien
 0311263E;Très bien
-0311264F;Mauvais
+0311264F;Assez bien
 0311334G;Bien
-0311573S;Mauvais
+0311573S;Assez bien
 0311581A;Bien
-0311720B;Mauvais
-0311721C;Très bien
+0311720B;Assez bien
+0311721C;Mauvais
 0311722D;Bien
 0311902Z;Bien
-0312139G;Très bien
+0312139G;Mauvais
 0312220V;Bien
 0312267W;Bien
-0312289V;Assez bien
-0312290W;Assez bien
+0312289V;Très bien
+0312290W;Très bien
 0312612W;Très bien
-0312686B;Assez bien
-0312698P;Assez bien
-0312700S;Mauvais
-0312762J;Assez bien
-0312799Z;Très bien
-0312843X;Très bien
+0312686B;Très bien
+0312698P;Très bien
+0312700S;Assez bien
+0312762J;Très bien
+0312799Z;Mauvais
+0312843X;Mauvais
 0312938A;Très bien
-0320012P;Mauvais
+0320012P;Assez bien
 0320013R;Très bien
-0320030J;Assez bien
-0320067Z;Assez bien
-0320563N;Mauvais
+0320030J;Très bien
+0320067Z;Très bien
+0320563N;Assez bien
 0340031Z;Très bien
-0340037F;Très bien
-0340042L;Très bien
-0340065L;Mauvais
-0340076Y;Très bien
+0340037F;Assez bien
+0340042L;Mauvais
+0340065L;Assez bien
+0340076Y;Mauvais
 0340086J;Assez bien
 0340110K;Bien
-0340974Z;Très bien
-0341066Z;Mauvais
-0341592W;Mauvais
-0341826A;Mauvais
+0340974Z;Mauvais
+0341066Z;Assez bien
+0341592W;Assez bien
+0341826A;Assez bien
 0342051V;Très bien
-0342132H;Mauvais
-0342266D;Très bien
-0460018V;Assez bien
-0480007X;Très bien
+0342132H;Assez bien
+0342266D;Mauvais
+0460018V;Très bien
+0480007X;Mauvais
 0650020U;Bien
 0650036L;Bien
 0660004W;Bien
-0660008A;Très bien
-0660010C;Très bien
-0660028X;Très bien
-0660078B;Mauvais
-0660600U;Très bien
-0660809W;Très bien
-0660864F;Très bien
+0660008A;Mauvais
+0660010C;Mauvais
+0660028X;Mauvais
+0660078B;Assez bien
+0660600U;Mauvais
+0660809W;Mauvais
+0660864F;Mauvais
 0660925X;Très bien
-0810002M;Assez bien
-0810008U;Très bien
-0810012Y;Très bien
+0810002M;Très bien
+0810008U;Mauvais
+0810012Y;Mauvais
 0810027P;Très bien
 0810028R;Bien
 0810033W;Bien
 0810036Z;Très bien
 0810043G;Bien
 0810052S;Bien
-0810126X;Assez bien
-0810959C;Assez bien
-0810960D;Assez bien
-0811032G;Très bien
+0810126X;Très bien
+0810959C;Très bien
+0810960D;Très bien
+0811032G;Mauvais
 0820004J;Très bien
-0820011S;Très bien
+0820011S;Mauvais
 0820067C;Bien
-0820684Y;Assez bien
+0820684Y;Très bien
 0820713E;Très bien
-0820917B;Mauvais
+0820917B;Assez bien
