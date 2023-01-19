@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Neonderthaw&family=Nunito&display=swap');
+
+body {
+  font-family: 'Nunito', cursive;
+  margin: 0;
+  background-color: #FFF7E9;
+}
+
+.main-container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: fit-content;
+}
+
+.header-container {
+  background-color: #FF731D;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+  width: 98%;
+  margin: 10px;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px 5px 5px;
+}
+
+.header-emoji {
+  height: 110px;
+  width: 110px;
+}
+
+.header-title {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+}
+
+.header-description {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+
+.content-container {
+  display: flex;
+  margin: 15px;
+  margin-top: 5px;
+}
+
+.right-side-content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.data
+{
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphics
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 100%;
+}
+
+.counts
+{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+  color : black;
+} 
+
+
+.graph
+{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+  color : black;
+}
+
+.btn-group
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn-outline-info{
+  margin: 3px;
+  width: 100%;
+  border-color: white;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+
+.btn-group .btn-outline-info:hover{
+  background-color: #FF731D;
+  border: 1px solid #FF731D;
+  color: white;
+}
+
+
+.parametre
+{
+  /* place the first card in the first column and first row */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+  width: 250px;
+  height: 500px;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1024px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 32px;
+}
+
+.card {
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
