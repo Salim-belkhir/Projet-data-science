@@ -70,7 +70,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 0;
-  margin-left: 15px;
+  margin-left: 265px;
 }
 
 .data
@@ -106,7 +106,14 @@ body {
 {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
   color : black;
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
 }
+
 
 .btn-group
 {
@@ -147,6 +154,15 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
   width: 250px;
   height: 500px;
+
+  /* fix this card to the right side of the page */
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 130px;
+  margin-left: 15px;
 }
 
 .wrapper {
