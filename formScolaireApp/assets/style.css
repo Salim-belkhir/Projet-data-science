@@ -23,8 +23,7 @@ body {
   width: 98%;
   margin: 10px;
   border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
-}
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 
 .header {
   display: flex;
@@ -91,29 +90,39 @@ body {
   background-color: white;
   padding: 10px;
   border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 100%;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  width: 100%;
 }
 
 .counts
 {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-  color : black;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  color : black;
 } 
 
 
 .graph
 {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
   color : black;
-  width: 25%;
+  width: 100%;
+  height: 100%;
+}
+
+.container > *
+{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
 }
 
+.container > * > *
+{
+  margin: 10px;
+  border-radius: 2em;
+  border: 1px solid #FFF7E9;
+  padding: 10px;
+  background-color: #FFF7E9;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 
 .btn-group
 {
@@ -131,8 +140,7 @@ body {
   border-color: white;
   background-color: white;
   color: black;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-}
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 
 .btn-group .btn-outline-info:hover{
   background-color: #FF731D;
@@ -151,8 +159,7 @@ body {
   background-color: white;
   padding: 10px;
   border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-  width: 250px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  width: 250px;
   height: 500px;
 
   /* fix this card to the right side of the page */
@@ -165,16 +172,3 @@ body {
   margin-left: 15px;
 }
 
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1024px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 32px;
-}
-
-.card {
-  margin-bottom: 24px;
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
-}
