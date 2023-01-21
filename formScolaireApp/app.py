@@ -27,30 +27,25 @@ import plotly.graph_objects as go
 import kaleido
 
 
-# get the data from the Data folder
+# Chargement des données
 
-#labelNumLycee = pd.read_csv('data/fr-en-occitanie-label-numerique-lycee.csv', sep=';')
-#labelNumCollege = pd.read_csv('data/fr-en-occitanie-ac-montpellier-label-numerique-college.csv', sep=';')
-#annuaireEducation = pd.read_csv('data/fr-en-annuaire-education.csv', sep=';')
-#collegeEffective = pd.read_csv('data/fr-en-college-effectifs-niveau-sexe-lv.csv', sep=';')
-#resultatLyceeGenerale = pd.read_csv('data/fr-en-indicateurs-de-resultat-des-lycees-denseignement-general-et-technologique.csv', sep=';')
-#resultatLyceePro = pd.read_csv('data/fr-en-indicateurs-de-resultat-des-lycees-denseignement-professionnels.csv', sep=';') 
-#indicateurCollege = pd.read_csv('data/od-indicateurs-2d-colleges-tne.csv', sep=';')
-#etic2 = pd.read_csv('data/fr-en-etic_2d.csv', sep=';')
+df_resultPro_all = pd.read_csv('data/df_result_all.csv', sep=',',low_memory=False)
+df_resultPro = pd.read_csv('data/df_result.csv', sep=',',low_memory=False)
+df_resultGen_all = pd.read_csv('data/df_result_allGen.csv', sep=',',low_memory=False)
+df_resultGen = pd.read_csv('data/df_result_Gen.csv', sep=',',low_memory=False)
+df_proportion_etablissement = pd.read_csv('data/df_proportion_etablissement.csv', sep=',',low_memory=False)
+df_proportion_etablissement_filtered = pd.read_csv('data/df_proportion_etablissement_filtered.csv', sep=',',low_memory=False)
+df_unique_labellisation = pd.read_csv('data/df_unique_labellisation.csv', sep=',',low_memory=False)
+df_labels_numeriques = pd.read_csv('data/df_labels_numeriques.csv', sep=',',low_memory=False)
+df_lycee_gen = pd.read_csv('data/df_lycee_gen.csv', sep=',',low_memory=False) 
+df_lycees_professionels = pd.read_csv('data/df_lycees_professionels.csv', sep=',',low_memory=False)
+df_lycee_all = pd.read_csv('data/df_lycee_all.csv', sep=',',low_memory=False)
+df2M = pd.read_csv('data/df2M.csv', sep=',',low_memory=False)
+dflabels = pd.read_csv('data/dflabels.csv', sep=',',low_memory=False)
+dfIPSM = pd.read_csv('data/dfIPSM.csv', sep=',',low_memory=False)
+dfIPSALL = pd.read_csv('data/dfIPSALL.csv', sep=',',low_memory=False)
+dflabels_IPS = pd.read_csv('data/dflabels_IPS.csv', sep=',',low_memory=False)
 
-df_resultPro_all = pd.read_csv('data/df_result_all.csv', sep=',')
-df_resultPro = pd.read_csv('data/df_result.csv', sep=',')
-
-df_resultGen_all = pd.read_csv('data/df_result_allGen.csv', sep=',')
-df_resultGen = pd.read_csv('data/df_result_Gen.csv', sep=',')
-
-df_proportion_etablissement = pd.read_csv('data/df_proportion_etablissement.csv', sep=',')
-df_proportion_etablissement_filtered = pd.read_csv('data/df_proportion_etablissement_filtered.csv', sep=',')
-df_unique_labellisation = pd.read_csv('data/df_unique_labellisation.csv', sep=',')
-df_labels_numeriques = pd.read_csv('data/df_labels_numeriques.csv', sep=',')
-df_lycee_gen = pd.read_csv('data/df_lycee_gen.csv', sep=',') 
-df_lycees_professionels = pd.read_csv('data/df_lycees_professionels.csv', sep=',')
-df_lycee_all = pd.read_csv('data/df_lycee_all.csv', sep=',')
 
 
 external_stylesheets = [
@@ -61,15 +56,17 @@ external_stylesheets = [
 
 
 
-# create an instance of the Dash class
+# Creation d'un instance de l'application et la relie a la feuille de style et Bootstrap
 app = Dash("Forme Scolaire Analyse", external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-# create the layout
+# Titre de l'application
+app.title = "Forme Scolaire Analyse"
+
+# Définition du layout de l'application
 app.layout = html.Div(
     children=[
         html.Div(
             children=[
-                # affficher l'image qui se retrouve dans le dossier assets
                 html.Img(src=app.get_asset_url("polytech.png"),className="header-emoji"),
                 html.Div(children=[  
                         html.H1(
@@ -167,6 +164,7 @@ app.layout = html.Div(
 )
 
 
+# Callback pour le choix des onglets en fonction du choix de l'utilisateur
 @app.callback(Output("card-tabs", "children"), [Input("radios", "value")])
 def tabs(value):
     if value == 1:
@@ -188,17 +186,23 @@ def tabs(value):
             dbc.Tab(label="Valeur Ajoutée", tab_id="tab-3",label_style={"color": "#0DCAF0"}),
             dbc.Tab(label="Taux De Réussite Attendu", tab_id="tab-4", label_style={"color": "#0DCAF0"}),
         ]
+    elif value == 4:
+        return [
+            dbc.Tab(label="Analyse Générale Sur Les Proportions", tab_id="tab-1", label_style={"color": "#0DCAF0"}),
+            dbc.Tab(label="Labélisation", tab_id="tab-2",label_style={"color": "#0DCAF0"}),
+            dbc.Tab(label="Indice De Position Sociale", tab_id="tab-3",label_style={"color": "#0DCAF0"}),
+        ]
 
 
 
-
+# Callback pour le choix des données à représenté en fonction du choix de l'utilisateur
 @app.callback(Output("graph", "children"), [Input("card-tabs", "active_tab")], [Input("radios", "value")])
 def data_choice2(value, value2):
     content = ""
     if (value == "tab-1" or value == "tab-3" or value == "tab-4") and value2 == 1:
+        
         # La répartition des Ecole, lycce et collège en Occitanie
         fig1 = px.pie(df_proportion_etablissement, values='effectif', names="type etablissement")
-        # update the layout of the figure
         fig1.update_layout(
             autosize=False,
             width=500,
@@ -208,6 +212,8 @@ def data_choice2(value, value2):
             title_font_size=13,
             paper_bgcolor="#FFF7E9",
         )
+
+        # La proportion des lycées labelisés et non labelisés en Occitanie
         fig2 = px.pie(df_unique_labellisation, values='effectif', names="labelise",)
         fig2.update_layout(
             autosize=False,
@@ -229,7 +235,8 @@ def data_choice2(value, value2):
         df_labels_numeriques["label"] = df_labels_numeriques["label"].apply(str)
         # re transform annee to str so it can be discrete value
         df_labels_numeriques["annee"] = df_labels_numeriques["annee"].apply(str)
-        #plotting a histogram to show the distribution of the labels
+        
+        #Plot un histogram de la distribution des labels
         fig3 = px.histogram(df_labels_numeriques, x="label", nbins=10, color="label",facet_col="annee" )
         fig3.update_layout(
             autosize=False,
@@ -253,7 +260,7 @@ def data_choice2(value, value2):
         labels = ['lycées polyvalents', 'lycées non polyvalents']
         values = [nbre_lycee_polyvalent,nbre_lycee_non_polyvalent]
 
-        #plot figure
+        # Affichage du camamber data pour les lycées polyvalents et non polyvalents
         fig4 = go.Figure(data=[go.Pie(labels=labels, values=values, title = "La proportions des Lycées polyvalents et non polyvalents")])
         fig4.update_layout(
             autosize=False,
@@ -272,12 +279,12 @@ def data_choice2(value, value2):
         nbre_lycee_gen_polyvalent_inclus = df_lycee_gen["UAI"].nunique()
         nbre_lycee_gen_uniques = nbre_lycee_gen_polyvalent_inclus - nbre_lycee_polyvalent
 
-        #data parameters for plotting camamber
+        #camamber data parametres pour les lycées polyvalents, professionels et générales
         labels=["Nbr lycées générales et technologiques","Nbr lycées professionels",
             "Nbr lycées polyvalents"]
         values=[nbre_lycee_gen_uniques,nbre_lycee_pro_uniques,nbre_lycee_polyvalent]
 
-        #plot figure
+        # Affichage du camamber data pour les lycées polyvalents, professionels et générales
         fig5 = go.Figure(data=[go.Pie(labels=labels, values=values, title = "La proportions des Lycées polyvalents, professionels , générales et technologiques")])
         fig5.update_layout(
             autosize=False,
@@ -322,7 +329,7 @@ def data_choice2(value, value2):
         ], className="container")
         return content
     elif value == "tab-2" and value2 == 1:
-        #creating the map
+        # Creation DE LA MAP
         m = folium.Map(location=[43.9310426514, 2.15075998953], zoom_start=6)
         #adding the markers to the map
         with open('data/fr-en-occitanie-label-numerique-lycee.geojson') as f:
@@ -644,7 +651,7 @@ def data_choice2(value, value2):
         fig11.update_layout(
             autosize=False,
             width=500,
-            height=350,
+            height=400,
             margin=dict(l=0, r=0, b=0, t=35, pad=0), 
             title="La variance du taux de réussite attendu avant et après obtention label",
             # change the size of the title
@@ -658,7 +665,7 @@ def data_choice2(value, value2):
         fig12.update_layout(
             autosize=False,
             width=500,
-            height=350,
+            height=400,
             margin=dict(l=0, r=0, b=0, t=35, pad=0), 
             title="La variance du taux de réussite attendu sans et avec labels",
             # change the size of the title
@@ -855,19 +862,297 @@ def data_choice2(value, value2):
             ], className="row3"),
             
         ], className="container")
+        return content            
+    elif value == "tab-3" and value2 == 3:
+        df_resultGen.sort_values(by="resultat_apres_label",ascending=False,inplace=True)
+        
+        fig1 = px.histogram(df_resultGen, x="resultat_apres_label", y="va_taux_reussite_toutes_series", nbins=10, histfunc="avg", color="resultat_apres_label", labels={"resultat_apres_label" :"Labelisation", "va_taux_reussite_toutes_series" : "Valeur ajoutée"})
+        fig1.update_layout(
+            autosize=False,
+            width=500,
+            height=300,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="La moyenne des valeurs ajoutés de réussites (toutes séries) avant et après obtention labels",
+            # change the size of the title
+            title_font_size=12,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        df_resultGen_all.sort_values(by="resultat_apres_label",ascending=False,inplace=True)
+
+
+        fig2 = px.box(df_resultGen_all, x="resultat_apres_label", y="va_taux_reussite_toutes_series",
+             color="resultat_apres_label",
+             labels={"resultat_apres_label" :"Labelisation", "va_taux_reussite_toutes_series" : "Valeur ajoutée"})
+        fig2.update_layout(
+            autosize=False,
+            width=500,
+            height=300,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="La variance des valeurs ajoutés de réussites (toutes séries) sans et avec labels",
+            # change the size of the title
+            title_font_size=13,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        fig3 = px.histogram(df_resultGen, x="departement_y", y="va_taux_reussite_toutes_series", nbins=10, histfunc="avg", color="departement_y", facet_row="resultat_apres_label", labels={"departement_y" :"Département", "va_taux_reussite_toutes_series" : "Valeur ajoutée", "resultat_apres_label" : "Labelisation"})
+        fig3.update_layout(
+            autosize=False,
+            width=1000,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="La moyenne des valeurs ajoutés de réussites selon les départements avant et après obtention labels",
+            # change the size of the title
+            title_font_size=15,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        content = html.Div([
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig1),
+                ], className="columns"),
+                html.Div([
+                    dcc.Graph(figure=fig2),
+                ], className="columns"),
+            ], className="row1"),
+
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig3),
+                ], className="columns"),
+            ], className="row2"),
+
+        ], className="container")
         return content
+    elif value == "tab-4" and value2 == 3:
+        fig1 = px.box(df_resultGen, x="resultat_apres_label", y="taux_reussite_attendu_toutes_series", color="resultat_apres_label",
+                    labels={"resultat_apres_label" :"Labelisation", "taux_reussite_attendu_toutes_series" : "Taux de réussite attendu"})
+        fig1.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="La variance du taux de réussite attendu avant et après obtention labels",
+            # change the size of the title
+            title_font_size=13,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        
+
+        fig2 = px.box(df_resultGen_all, x="resultat_apres_label", y="taux_reussite_attendu_toutes_series", color="resultat_apres_label",
+                    labels={"resultat_apres_label" :"Labelisation", "taux_reussite_attendu_toutes_series" : "Taux de réussite attendu"})
+        fig2.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="La variance du taux de réussite attendu sans et avec labels",
+            # change the size of the title
+            title_font_size=13,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        content = html.Div([
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig1),
+                ], className="columns"),
+                html.Div([
+                    dcc.Graph(figure=fig2),
+                ], className="columns"),
+            ], className="row1"),
+
+        ], className="container")
+        return content
+    if (value == "tab-1" or value == "tab-4")  and value2 == 4:
+        df2M["année"] = df2M["année"].astype(str)
+        fig1 = px.histogram(df2M, x="année", y="admis", color="année", labels={"année" :"Année", "admis" : "Nombre d'admis"})
+        fig1.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution du nombre d'admis en fonction de l'année pour l'académie de Montpellier",
+            # change the size of the title
+            title_font_size=11,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        # Total d'inscrits pour toutes les séries
+        fig2 = px.histogram(df2M, x="année", y="inscrits", color="année",labels={"année" :"Année", "inscrits" : "Nombre d'inscrits"})
+        fig2.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution du nombre d'inscrits en fonction de l'année pour l'académie de Montpellier",
+            # change the size of the title
+            title_font_size=11,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        fig3 = px.histogram(df2M, x="année", y="inscrits", color="série", facet_col="série",labels={"année" :"Année", "inscrits" : "Nombre d'inscrits"})
+        fig3.update_layout(
+            autosize=False,
+            width=1000,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution du nombre d'inscrits en fonction de l'année et de la série pour l'académie de Montpellier",
+            # change the size of the title
+            title_font_size=11,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )        
+        
+        content = html.Div([
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig1),
+                ], className="columns"),
+
+                html.Div([
+                    dcc.Graph(figure=fig2),
+                ], className="columns"),
+
+            ], className="row1"),
+
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig3),
+                ], className="columns"),
+            ], className="row2"),
+
+        ], className="container")
+        return content
+    elif value =="tab-2" and value2 == 4:      
+        dflabels["Label"] = dflabels["Label"].apply(str)
+        dflabels["Département"] = dflabels["Département"].apply(str)
+        dflabels["Année"] = dflabels["Année"].apply(str)
+        fig1 = px.histogram(dflabels, x="Année", y="Label", color="Année", facet_col="Label")
+        fig1.update_layout(
+            autosize=False,
+            width=1000,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution du nombre de labels en fonction de l'année pour les collèges de l'académie de Montpellier",
+            # change the size of the title
+            title_font_size=11,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+        
+        # Compte du nombre de collèges dont le RNE est unique ayant un label de 1
+        nblabels1 = dflabels.query("Label == '1'")["RNE"].nunique()
+        # Compte du nombre de collèges dont le RNE est unique ayant un label de 2
+        nblabels2 = dflabels.query("Label == '2'")["RNE"].nunique()
+        # Compte du nombre de collèges dont le RNE est unique ayant un label de 3
+        nblabels3 = dflabels.query("Label == '3'")["RNE"].nunique()
+        labelvals = [nblabels1, nblabels2, nblabels3]
+        labelnames = ['Label 1', 'Label 2', 'Label 3']
+        fig2 = px.pie(values=labelvals, names=labelnames, labels={"values" : "Nombre de collèges", "names" : "Labels"})
+        fig2.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution du nombre de labels pour les collèges de l'académie de Montpellier",
+            # change the size of the title
+            title_font_size=11,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
 
 
+        content = html.Div([
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig1),
+                ], className="columns"),
+            ], className="row1"),
+            
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig2),
+                ], className="columns"),
+            ], className="row2"),
 
-## remplir le counts en calculant le nombre de lycees professionnel lorque la radio == 1
-#@app.callback(
-#    Output('counts', 'children'),
-#    [Input('radios', 'value')])
-#def update_counts(value):
-#    if value == 2:
-#        return len(df_resultPro[df_resultPro["resultat_apres_label"] == 1])
-#    elif value == 0:
-#        return len(df_resultPro[df_resultPro["resultat_apres_label"] == 0])
+        ], className="container")
+        return content
+    elif value =="tab-3" and value2 == 4:
+        # IPS moyen en fct du département
+        fig1 = px.histogram(dfIPSM, x="Département", y="IPS", color="Département", histfunc="avg", labels={"Département" :"Département", "IPS" : "IPS moyen"})
+        fig1.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution de l'IPS moyen en fonction du département pour les collèges de l'académie de Montpellier",
+            # change the size of the title
+            title_font_size=12,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        # IPS moyen en fct du département
+        fig2 = px.histogram(dfIPSALL, x="Académie", y="IPS", color="Académie", histfunc="avg",labels={"Académie" :"Académie", "IPS" : "IPS moyen"})
+        fig2.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution de l'IPS moyen en fonction de l'académie pour les collèges en 2021",
+            # change the size of the title
+            title_font_size=12,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        dflabels_IPS["Label"] = dflabels_IPS["Label"].apply(str)
+        fig3 = px.histogram(dflabels_IPS, x="Label", y="IPS", color="Label", histfunc="avg", labels={"Label" :"Label", "IPS" : "IPS moyen"})
+        fig3.update_layout(
+            autosize=False,
+            width=500,
+            height=400,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0),
+            title="Distribution de l'IPS moyen en fonction du label pour les collèges de l'académie de Montpellier en 2021",
+            # change the size of the title
+            title_font_size=12,
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9",
+        )
+
+        content = html.Div([
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig1),
+                ], className="columns"),
+            ], className="row1"),
+
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig2),
+                ], className="columns"),
+
+                html.Div([
+                    dcc.Graph(figure=fig3),
+                ], className="columns"),
+            ], className="row2"),
+
+        ], className="container")
+        return content
+        
+
+    
+
+
 
 # run the app
 if __name__ == '__main__':
