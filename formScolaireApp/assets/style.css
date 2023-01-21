@@ -23,7 +23,7 @@ body {
   width: 98%;
   margin: 10px;
   border-radius: 1em;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 
 .header {
   display: flex;
@@ -68,11 +68,36 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  padding: 0;
   margin-left: 265px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* remove the border around the content */
+  border: none;
+  border-radius: 1em;
 }
 
-.data
+.card-header
+{
+  width: 100%;
+  background-color: #FFF7E9;
+  border: none;
+  border: #FFF7E9 solid 1px;
+  border-radius: 2em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#card-tabs > *
+{
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+
+
+.sommaire
 {
   width: 100%;
   margin-bottom: 15px;
@@ -90,14 +115,14 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
   background-color: white;
   padding: 10px;
   border-radius: 1em;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  width: 100%;
 }
 
+/*
 .counts
 {
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  color : black;
+ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  color : black;
 } 
-
+*/
 
 .graph
 {
@@ -122,25 +147,25 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  color : black;
   border: 1px solid #FFF7E9;
   padding: 10px;
   background-color: #FFF7E9;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 
 .btn-group
 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
 }
 
 .btn-outline-info{
-  margin: 3px;
+  margin-top: 15px;
   width: 100%;
   border-color: white;
   background-color: white;
   color: black;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 .btn-group .btn-outline-info:hover{
   background-color: #FF731D;
@@ -153,15 +178,12 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 {
   /* place the first card in the first column and first row */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: start;
-  align-items: center;
-  background-color: white;
-  padding: 10px;
+  align-items: center; 
   border-radius: 1em;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  width: 250px;
+  width: 250px;
   height: 500px;
-
   /* fix this card to the right side of the page */
   position: fixed;
   left: 0;
@@ -169,6 +191,5 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  width: 250px;
   bottom: 0;
   margin: auto;
   margin-top: 130px;
-  margin-left: 15px;
 }
 
