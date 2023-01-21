@@ -36,8 +36,10 @@ external_stylesheets = [
     },
 ]
 
+
+
 # create an instance of the Dash class
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash("Forme Scolaire Analyse", external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 fig = px.bar(labelNumLycee, x="Niveau de Label", y="RNE", color="Niveau de Label")
 
@@ -63,13 +65,8 @@ app.layout = html.Div(
         ), 
         html.Div(
             children=
-            [       
+            [   
                 html.Div(
-                    children=["parametre displayed here"],
-                    className="parametre",
-                ),
-                html.Div
-                (
                     children=[
                         html.Div(
                             children=[
@@ -82,12 +79,13 @@ app.layout = html.Div(
                                             labelClassName="btn btn-outline-info",
                                             labelCheckedClassName="active",
                                             options=[
-                                                {"label": "Lycée Professionel", "value": 1},
-                                                {"label": "Lycée Genérale et Technologique", "value": 2},
-                                                {"label": "Collège", "value": 3},
-                                                {"label": "Ecole", "value": 4},
+                                                {"label": "Etat Des Lieux Générale", "value": 1},
+                                                {"label": "Lycée Professionel", "value": 2},
+                                                {"label": "Lycée Genérale et Technologique", "value": 3},
+                                                {"label": "Collège", "value": 4},
+                                                {"label": "Ecole", "value": 5},
                                             ],
-                                            value=1,
+                                            value=2,
                                         ),
                                         html.Div(id="output"),
                                     ],
@@ -96,28 +94,51 @@ app.layout = html.Div(
                             ],
                             className="data",
                         ),
+                    ],
+                    className="parametre",
+                    id="parametre",
+                ),
+                dbc.Card
+                (
+                    [
+                        dbc.CardHeader(
+                            dbc.Tabs(
+                                [
 
-                        html.Div(
-                            children=[
-                                html.Div(
-                                    children=["counts displayed here"],
-                                    className="counts",
-                                ),
-                                html.Div(
+                                ],
+                                id="card-tabs",
+                                active_tab="tab-1",
+                            ),
+                            className="card-header",
+                        ),
+                        dbc.CardBody
+                        (
+                            [
+                                html.Div
+                                (
                                     children=[
                                         html.Div(
-                                            id="graph",
+                                            children=[],
+                                            className="counts",
+                                            id="counts",
                                         ),
-                                       
+                                        html.Div(
+                                            children=[
+                                                html.Div(
+                                                    id="graph",
+                                                ),
+                                            
+                                            ],
+                                            className="graph",
+                                        ),
                                     ],
-                                    className="graph",
-                                ),
+                                    className="graphics",
+                                )
                             ],
-                            className="graphics",
+                            className="card-body",
                         ),
-                    ],
-                    className="right-side-content",
-                ),
+                    ], className="right-side-content",
+                )
             ],
             className="content-container",
         )
@@ -126,10 +147,23 @@ app.layout = html.Div(
 )
 
 
-@app.callback(Output("graph", "children"), [Input("radios", "value")])
-def data_choice(value):
+@app.callback(Output("card-tabs", "children"), [Input("radios", "value")])
+def tabs(value):
+    if value == 2:
+        return [
+            dbc.Tab(label="Analyse Générale", tab_id="tab-1", label_style={"color": "#0DCAF0"}),
+            dbc.Tab(label="Taux De Réussite", tab_id="tab-2",label_style={"color": "#0DCAF0"}),
+            dbc.Tab(label="Valeur Ajoutée", tab_id="tab-3",label_style={"color": "#0DCAF0"}),
+            dbc.Tab(label="Taux De Réussite Attendu", tab_id="tab-4", label_style={"color": "#0DCAF0"}),
+        ]
+
+
+
+
+@app.callback(Output("graph", "children"), [Input("card-tabs", "active_tab")], [Input("radios", "value")])
+def data_choice2(value, value2):
     content = ""
-    if value == 1:
+    if value == "tab-1" and value2 == 2:
         # La proportion de lycées professionnels labelisés 
         nbre_lycee_professionnel = df_result_all['code_etablissement'].nunique()
         nbre_lycee_professionel_labelise = df_result_all['rne'].nunique()
@@ -193,7 +227,28 @@ def data_choice(value):
             title_font_size=15,   
             paper_bgcolor="#FFF7E9", 
         )
+        
+        content = html.Div([
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig2),
+                ], className="columns"),
+            ],
+             className="row1"),
 
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig3),
+                ], className="columns"),
+                html.Div([
+                    dcc.Graph(figure=fig4),
+                ], className="columns"),
+            ],
+             className="row2"),
+        ], className="container")
+        return content
+
+    elif value == "tab-2" and value2 == 2:
         # transform label to numeric
         df_result["label"] = pd.to_numeric(df_result["label"])
         #sort label by ascending order
@@ -220,7 +275,7 @@ def data_choice(value):
             width=1000,
             height=500,
             margin=dict(l=0, r=0, b=0, t=35, pad=0), 
-            title="La moyenne des taux de réussites selon lesdépartements - avant et après obtention labels",
+            title="La moyenne des taux de réussites selon les départements - avant et après obtention labels",
             # change the size of the title
             title_font_size=15,    
             paper_bgcolor="#FFF7E9", 
@@ -285,6 +340,34 @@ def data_choice(value):
             paper_bgcolor="#FFF7E9", 
         )
 
+        content = html.Div([            
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig6),
+                ], className="columns"),
+            ],
+             className="row3"),
+            
+            
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig7),
+                ], className="columns"),
+                html.Div([
+                    dcc.Graph(figure=fig8),
+                ], className="columns"),
+            ],
+             className="row4"),
+
+            html.Div([
+                html.Div([
+                    dcc.Graph(figure=fig5),
+                ], className="columns"),
+            ],
+             className="row5"), 
+        ], className="container")
+        return content
+    elif value == "tab-3" and value2 == 2:
         fig9 = px.histogram(df_result, x="resultat_apres_label", y="va_reu_total", nbins=10, histfunc="avg", color="resultat_apres_label", labels={"va_reu_total" : "Valeur ajoutée", "resultat_apres_label" : "Résultat Avec/ Sans label"})
         fig9.update_layout(
             autosize=False,
@@ -327,91 +410,7 @@ def data_choice(value):
             legend_font_size=10,
             paper_bgcolor="#FFF7E9", 
         )
-
-
-        fig11 = px.box(df_result, x="resultat_apres_label",y="taux_reussite_attendu_france_total_secteurs",
-        color="resultat_apres_label",
-        labels={"taux_reussite_attendu_france_total_secteurs" :"Taux de réussite attendu", "resultat_apres_label" : "Résultat Avec/ Sans label"})
-        fig11.update_layout(
-            autosize=False,
-            width=500,
-            height=250,
-            margin=dict(l=0, r=0, b=0, t=35, pad=0), 
-            title="La variance du taux de réussite attendu avant et après obtention label",
-            # change the size of the title
-            title_font_size=13,    
-            legend_font_size=10,
-            paper_bgcolor="#FFF7E9", 
-        )
-
-
-
-        fig12 = px.box(df_result_all, x="resultat_apres_label",y="taux_reussite_attendu_france_total_secteurs",color="resultat_apres_label",
-        labels={"taux_reussite_attendu_france_total_secteurs" :"Taux de réussite attendu", "resultat_apres_label" : "Résultat Avec/ Sans label"})
-        fig12.update_layout(
-            autosize=False,
-            width=500,
-            height=250,
-            margin=dict(l=0, r=0, b=0, t=35, pad=0), 
-            title="La variance du taux de réussite attendu sans et avec labels",
-            # change the size of the title
-            title_font_size=13,    
-            legend_font_size=10,
-            paper_bgcolor="#FFF7E9", 
-        )
-
         content = html.Div([
-            #html.H1("Analyse des données"),
-            #html.Hr(),
-            html.Div([
-                html.Div([
-                    dcc.Graph(figure=fig2),
-                ], className="columns"),
-            ],
-             className="row1"),
-
-            html.Div([
-                html.Div([
-                    dcc.Graph(figure=fig3),
-                ], className="columns"),
-                html.Div([
-                    dcc.Graph(figure=fig4),
-                ], className="columns"),
-            ],
-             className="row2"),
-
-            html.H3("Taux de réussite"),
-            html.Hr(),
-            
-            html.Div([
-                html.Div([
-                    dcc.Graph(figure=fig6),
-                ], className="columns"),
-            ],
-             className="row3"),
-            
-            
-            html.Div([
-                html.Div([
-                    dcc.Graph(figure=fig7),
-                ], className="columns"),
-                html.Div([
-                    dcc.Graph(figure=fig8),
-                ], className="columns"),
-            ],
-             className="row4"),
-
-            html.Div([
-                html.Div([
-                    dcc.Graph(figure=fig5),
-                ], className="columns"),
-            ],
-             className="row5"), 
-            
-            html.H3("Valeur ajoutée"),
-            html.Hr(),
-
-
             html.Div([
                 html.Div([
                     dcc.Graph(figure=fig9),
@@ -426,10 +425,38 @@ def data_choice(value):
                     dcc.Graph(figure=fig13),
                 ], className="columns"),
             ], className="row7"),
-            
-            html.H3("Taux de réussite attendu en France"),
-            html.Hr(),
+        ], className="container")
+        return content
+    elif value == "tab-4" and value2 == 2:
+        fig11 = px.box(df_result, x="resultat_apres_label",y="taux_reussite_attendu_france_total_secteurs",
+        color="resultat_apres_label",
+        labels={"taux_reussite_attendu_france_total_secteurs" :"Taux de réussite attendu", "resultat_apres_label" : "Résultat Avec/ Sans label"})
+        fig11.update_layout(
+            autosize=False,
+            width=500,
+            height=350,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0), 
+            title="La variance du taux de réussite attendu avant et après obtention label",
+            # change the size of the title
+            title_font_size=13,    
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9", 
+        )
 
+        fig12 = px.box(df_result_all, x="resultat_apres_label",y="taux_reussite_attendu_france_total_secteurs",color="resultat_apres_label",
+        labels={"taux_reussite_attendu_france_total_secteurs" :"Taux de réussite attendu", "resultat_apres_label" : "Résultat Avec/ Sans label"})
+        fig12.update_layout(
+            autosize=False,
+            width=500,
+            height=350,
+            margin=dict(l=0, r=0, b=0, t=35, pad=0), 
+            title="La variance du taux de réussite attendu sans et avec labels",
+            # change the size of the title
+            title_font_size=13,    
+            legend_font_size=10,
+            paper_bgcolor="#FFF7E9", 
+        )
+        content = html.Div([
             html.Div([
                 html.Div([
                     dcc.Graph(figure=fig11),
@@ -439,9 +466,18 @@ def data_choice(value):
                 ], className="columns"),
             ], className="row8"),
         ], className="container")
-
         return content
 
+
+## remplir le counts en calculant le nombre de lycees professionnel lorque la radio == 1
+#@app.callback(
+#    Output('counts', 'children'),
+#    [Input('radios', 'value')])
+#def update_counts(value):
+#    if value == 2:
+#        return len(df_result[df_result["resultat_apres_label"] == 1])
+#    elif value == 0:
+#        return len(df_result[df_result["resultat_apres_label"] == 0])
 
 # run the app
 if __name__ == '__main__':
